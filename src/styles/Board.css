@@ -7,9 +7,9 @@
   align-items: flex-start;
   justify-content: center;
   min-height: calc(100vh - 64px);
-  background: #212020;
+  background: #cdcecf;
 }
 
 .app.dark .board {
-  background: #3d4247;
+  background: #262628;
 }

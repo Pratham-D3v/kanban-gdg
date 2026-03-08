@@ -198,7 +198,7 @@
 /* DARK MODE */
 /* DARK MODE */
 .app.dark .card {
-  background: #32324a;
+  background: #323235;
   box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
@@ -216,14 +216,14 @@
 }
 
 .app.dark .card-move {
-  background: #2a2a3e;
-  border-color: #3a3a5e;
+  background: #454546;
+  border-color: #1e1e1f;
   color: #80868b;
 }
 
 .app.dark .card-edit-input,
 .app.dark .card-edit-textarea {
   background: #2a2a3e;
-  border-color: #3a3a5e;
+  border-color: #29292d;
   color: #e0e0e0;
 }
