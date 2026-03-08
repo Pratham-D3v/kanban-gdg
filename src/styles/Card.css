@@ -195,3 +195,34 @@
 .card.done {
   border-left-color: #34A853;
 }
+/* DARK MODE */
+.app.dark .card {
+  background: #0f3460;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.app.dark .card-title {
+  color: #e0e0e0;
+}
+
+.app.dark .card-description {
+  color: #80868b;
+}
+
+.app.dark .card-delete,
+.app.dark .card-edit {
+  color: #80868b;
+}
+
+.app.dark .card-move {
+  background: #16213e;
+  border-color: #2a2a4a;
+  color: #80868b;
+}
+
+.app.dark .card-edit-input,
+.app.dark .card-edit-textarea {
+  background: #16213e;
+  border-color: #2a2a4a;
+  color: #e0e0e0;
+}

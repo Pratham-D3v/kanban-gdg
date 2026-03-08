@@ -79,3 +79,24 @@
 .btn-add:hover {
   background: #1a73e8;
 }
+/* DARK MODE */
+.app.dark .modal {
+  background: #16213e;
+}
+
+.app.dark .modal h2 {
+  color: #e0e0e0;
+}
+
+.app.dark .modal input,
+.app.dark .modal textarea {
+  background: #0f3460;
+  border-color: #2a2a4a;
+  color: #e0e0e0;
+}
+
+.app.dark .btn-cancel {
+  background: #16213e;
+  border-color: #2a2a4a;
+  color: #e0e0e0;
+}

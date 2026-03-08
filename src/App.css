@@ -90,3 +90,58 @@
 .footer-dot {
   color: #e0e0e0;
 }
+/* THEME TOGGLE BUTTON */
+.theme-toggle {
+  background: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background: #f1f3f4;
+}
+
+/* DARK MODE */
+.app.dark {
+  background-color: #1a1a2e;
+}
+
+.app.dark .app-header {
+  background: #16213e;
+  border-bottom-color: #2a2a4a;
+}
+
+.app.dark .header-title {
+  color: #e0e0e0;
+}
+
+.app.dark .header-subtitle {
+  color: #80868b;
+}
+
+.app.dark .theme-toggle {
+  border-color: #2a2a4a;
+  color: #e0e0e0;
+}
+
+.app.dark .theme-toggle:hover {
+  background: #2a2a4a;
+}
+
+.app.dark .app-footer {
+  background: #16213e;
+  border-top-color: #2a2a4a;
+  color: #80868b;
+}
+
+.app.dark .app-footer strong {
+  color: #e0e0e0;
+}

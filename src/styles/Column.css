@@ -125,3 +125,20 @@
   color: #4285f4;
   background: #e8f0fe;
 }
+/* DARK MODE */
+.app.dark .column {
+  background: #16213e;
+  border-color: #2a2a4a;
+}
+
+.app.dark .column-header {
+  border-bottom-color: #2a2a4a;
+}
+
+.app.dark .column-header h2 {
+  color: #e0e0e0;
+}
+
+.app.dark .add-task-btn {
+  border-color: #2a2a4a;
+}
