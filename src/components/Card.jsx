@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import '../styles/Card.css';
 
-function Card({ task, setTasks, isDragging }) {
+function Card({ task, setTasks, isDragging, columnClassName }) {
   const [isEditing, setIsEditing] = useState(false);
   const [editTitle, setEditTitle] = useState(task.title);
   const [editDescription, setEditDescription] = useState(task.description);
@@ -60,7 +60,7 @@ function Card({ task, setTasks, isDragging }) {
   return (
     <div
   id={`card-${task.id}`}
-  className={`card card-enter ${isDragging ? 'dragging' : ''}`}
+  className={`card card-enter ${isDragging ? 'dragging' : ''} ${columnClassName}`}
 >
       <div className="card-top">
         <p className="card-title">{task.title}</p>

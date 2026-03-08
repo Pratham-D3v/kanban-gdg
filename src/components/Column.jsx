@@ -46,6 +46,7 @@ function Column({ title, className, tasks, setTasks }) {
                       task={task}
                       setTasks={setTasks}
                       isDragging={snapshot.isDragging}
+                      columnClassName={className}
                     />
                   </div>
                 )}
