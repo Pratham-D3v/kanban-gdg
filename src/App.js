@@ -1,23 +1,50 @@
-import logo from './logo.svg';
+import { useState, useEffect } from 'react';
+import Board from './components/Board';
 import './App.css';
 
+const INITIAL_TASKS = [
+  { id: 1, title: 'Design the logo', description: 'Create a Google-themed logo', column: 'Todo' },
+  { id: 2, title: 'Build the navbar', description: 'Responsive top navigation', column: 'Todo' },
+  { id: 3, title: 'Setup React project', description: 'Initialize and clean up', column: 'In Progress' },
+  { id: 4, title: 'Write README', description: 'Document the project', column: 'Done' },
+];
+
 function App() {
+  const [tasks, setTasks] = useState(() => {
+    const saved = localStorage.getItem('kanban-tasks');
+    return saved ? JSON.parse(saved) : INITIAL_TASKS;
+  });
+
+  useEffect(() => {
+    localStorage.setItem('kanban-tasks', JSON.stringify(tasks));
+  }, [tasks]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="app">
+      <header className="app-header">
+        <div className="header-left">
+  <div className="header-title-group">
+    <span className="header-title">Kanban Board</span>
+    <span className="header-subtitle">by Pratham Dev</span>
+  </div>
+</div>
+        <div className="header-right">
+         <div className="header-dots">
+         <span style={{ background: '#EA4335' }}></span>
+         <span style={{ background: '#FBBC05' }}></span>
+         <span style={{ background: '#34A853' }}></span>
+         <span style={{ background: '#4285F4' }}></span>
+         </div>
+        </div>
       </header>
+      <Board tasks={tasks} setTasks={setTasks} />
+      <footer className="app-footer">
+        <span>Made with</span>
+        <span className="heart">♥</span>
+        <span>by <strong>Pratham Dev</strong></span>
+        <span className="footer-dot">·</span>
+        <span>GDG on Campus SRM 2026</span>
+      </footer>
     </div>
   );
 }

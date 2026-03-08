@@ -1,0 +1,127 @@
+.column {
+  background: #f8f9fa;
+  border-radius: 12px;
+  width: 300px;
+  min-height: fit-content;
+  box-shadow: none;
+  border: 1px solid #e0e0e0;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  border-top: 4px solid #e0e0e0;
+}
+
+.column.todo {
+  border-top-color: #4285F4;
+}
+
+.column.inprogress {
+  border-top-color: #FBBC05;
+}
+
+.column.done {
+  border-top-color: #34A853;
+}
+
+.column-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 1px solid #f1f3f4;
+}
+
+.column-header h2 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #3c4043;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.task-count {
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.todo .task-count {
+  background: #e8f0fe;
+  color: #4285F4;
+}
+
+.inprogress .task-count {
+  background: #fef9e3;
+  color: #F9AB00;
+}
+
+.done .task-count {
+  background: #e6f4ea;
+  color: #34A853;
+}
+
+.column-body {
+  padding: 8px;
+  min-height: 20px;
+  transition: background 0.2s ease;
+  flex: 1;
+}
+
+.dragging-over {
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.add-task-btn {
+  align-self: flex-end;
+  margin: 8px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.add-task-btn:hover {
+  background: #1a73e8;
+  box-shadow: 0 4px 12px rgba(66, 133, 244, 0.5);
+  transform: scale(1.1);
+}
+
+.todo .add-task-btn {
+  background: #4285F4;
+  box-shadow: 0 2px 8px rgba(66, 133, 244, 0.4);
+}
+
+.inprogress .add-task-btn {
+  background: #F9AB00;
+  box-shadow: 0 2px 8px rgba(249, 171, 0, 0.4);
+}
+
+.inprogress .add-task-btn:hover {
+  background: #F29900;
+}
+
+.done .add-task-btn {
+  background: #34A853;
+  box-shadow: 0 2px 8px rgba(52, 168, 83, 0.4);
+}
+
+.done .add-task-btn:hover {
+  background: #2d9248;
+}
+
+.add-task-btn:hover {
+  border-color: #4285f4;
+  color: #4285f4;
+  background: #e8f0fe;
+}
