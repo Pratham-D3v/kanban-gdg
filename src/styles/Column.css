@@ -127,8 +127,8 @@
 }
 /* DARK MODE */
 .app.dark .column {
-  background: #2a2a3e;
-  border-color: #3a3a5e;
+  background: #474643;
+  border-color: #555452;
 }
 
 .app.dark .column-header {

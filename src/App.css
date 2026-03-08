@@ -135,12 +135,12 @@
 /* DARK MODE */
 /* DARK MODE */
 .app.dark {
-  background-color: #1e1e2e;
+  background-color: #2596be;
 }
 
 .app.dark .app-header {
-  background: #1a1a2e;
-  border-bottom-color: #2a2a3e;
+  background: #000000;
+  border-bottom-color: #000000;
 }
 
 .app.dark .header-title {
