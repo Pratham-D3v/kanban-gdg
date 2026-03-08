@@ -37,12 +37,11 @@ function App() {
           </div>
         </div>
         <div className="header-right">
-          <button
-            className="theme-toggle"
-            onClick={() => setIsDark(prev => !prev)}
-          >
-            {isDark ? '☀️' : '🌙'}
-          </button>
+          <button className="theme-toggle" onClick={() => setIsDark(prev => !prev)}>
+  <span className="toggle-thumb">
+    {isDark ? '🌙' : '☀️'}
+  </span>
+</button>
           <div className="header-dots">
             <span style={{ background: '#EA4335' }}></span>
             <span style={{ background: '#FBBC05' }}></span>

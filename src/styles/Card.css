@@ -196,8 +196,9 @@
   border-left-color: #34A853;
 }
 /* DARK MODE */
+/* DARK MODE */
 .app.dark .card {
-  background: #0f3460;
+  background: #32324a;
   box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
@@ -215,14 +216,14 @@
 }
 
 .app.dark .card-move {
-  background: #16213e;
-  border-color: #2a2a4a;
+  background: #2a2a3e;
+  border-color: #3a3a5e;
   color: #80868b;
 }
 
 .app.dark .card-edit-input,
 .app.dark .card-edit-textarea {
-  background: #16213e;
-  border-color: #2a2a4a;
+  background: #2a2a3e;
+  border-color: #3a3a5e;
   color: #e0e0e0;
 }

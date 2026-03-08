@@ -80,8 +80,13 @@
   background: #1a73e8;
 }
 /* DARK MODE */
+/* DARK MODE */
+.app.dark .modal-overlay {
+  background: rgba(0,0,0,0.7);
+}
+
 .app.dark .modal {
-  background: #16213e;
+  background: #2a2a3e;
 }
 
 .app.dark .modal h2 {
@@ -90,13 +95,13 @@
 
 .app.dark .modal input,
 .app.dark .modal textarea {
-  background: #0f3460;
-  border-color: #2a2a4a;
+  background: #32324a;
+  border-color: #3a3a5e;
   color: #e0e0e0;
 }
 
 .app.dark .btn-cancel {
-  background: #16213e;
-  border-color: #2a2a4a;
+  background: #32324a;
+  border-color: #3a3a5e;
   color: #e0e0e0;
 }

@@ -127,12 +127,12 @@
 }
 /* DARK MODE */
 .app.dark .column {
-  background: #16213e;
-  border-color: #2a2a4a;
+  background: #2a2a3e;
+  border-color: #3a3a5e;
 }
 
 .app.dark .column-header {
-  border-bottom-color: #2a2a4a;
+  border-bottom-color: #3a3a5e;
 }
 
 .app.dark .column-header h2 {
@@ -140,5 +140,10 @@
 }
 
 .app.dark .add-task-btn {
-  border-color: #2a2a4a;
+  border-color: #3a3a5e;
+  color: #80868b;
+}
+
+.app.dark .add-task-btn:hover {
+  background: #3a3a5e;
 }
