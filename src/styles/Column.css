@@ -132,7 +132,7 @@
 }
 
 .app.dark .column-header {
-  border-bottom-color: #3a3a5e;
+  border-bottom-color: #282829;
 }
 
 .app.dark .column-header h2 {
@@ -140,10 +140,10 @@
 }
 
 .app.dark .add-task-btn {
-  border-color: #3a3a5e;
+  border-color: #34343c;
   color: #80868b;
 }
 
 .app.dark .add-task-btn:hover {
-  background: #3a3a5e;
+  background: #27272f;
 }
