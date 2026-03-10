@@ -51,11 +51,6 @@ function App() {
         </div>
       </header>
       <Board tasks={tasks} setTasks={setTasks} />
-      <footer className="app-footer">
-        <span>Made by</span>
-        <span>by <strong>Pratham Dev</strong></span>
-        <span className="footer-dot">·</span>
-      </footer>
     </div>
   );
 }
