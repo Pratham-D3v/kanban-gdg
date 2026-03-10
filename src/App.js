@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Board from './components/Board';
+import AddTaskModal from './components/AddTaskModal';
 import './App.css';
 
 const INITIAL_TASKS = [
@@ -19,6 +20,8 @@ function App() {
     return localStorage.getItem('kanban-theme') === 'dark';
   });
 
+  const [showModal, setShowModal] = useState(false);
+
   useEffect(() => {
     localStorage.setItem('kanban-tasks', JSON.stringify(tasks));
   }, [tasks]);
@@ -26,6 +29,16 @@ function App() {
   useEffect(() => {
     localStorage.setItem('kanban-theme', isDark ? 'dark' : 'light');
   }, [isDark]);
+
+  function handleAddTask(taskTitle, taskDescription) {
+    const newTask = {
+      id: Date.now(),
+      title: taskTitle,
+      description: taskDescription,
+      column: 'Todo',
+    };
+    setTasks(prev => [...prev, newTask]);
+  }
 
   return (
     <div className={`app ${isDark ? 'dark' : ''}`}>
@@ -37,11 +50,14 @@ function App() {
           </div>
         </div>
         <div className="header-right">
+          <button className="header-add-btn" onClick={() => setShowModal(true)}>
+            + New Task
+          </button>
           <button className="theme-toggle" onClick={() => setIsDark(prev => !prev)}>
-  <span className="toggle-thumb">
-    {isDark ? '🌙' : '☀️'}
-  </span>
-</button>
+            <span className="toggle-thumb">
+              {isDark ? '🌙' : '☀️'}
+            </span>
+          </button>
           <div className="header-dots">
             <span style={{ background: '#EA4335' }}></span>
             <span style={{ background: '#FBBC05' }}></span>
@@ -50,9 +66,18 @@ function App() {
           </div>
         </div>
       </header>
+      {showModal && (
+        <AddTaskModal
+          columnTitle="Todo"
+          onAdd={handleAddTask}
+          onClose={() => setShowModal(false)}
+        />
+      )}
       <Board tasks={tasks} setTasks={setTasks} />
+      <footer className="app-footer">
+        <span> Made by Pratham Dev</span>
+      </footer>
     </div>
   );
 }
-
 export default App;

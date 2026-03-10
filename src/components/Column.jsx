@@ -1,22 +1,8 @@
-import { useState } from 'react';
 import { Droppable, Draggable } from '@hello-pangea/dnd';
 import Card from './Card';
-import AddTaskModal from './AddTaskModal';
 import '../styles/Column.css';
 
 function Column({ title, className, tasks, setTasks, isDefault, onDeleteColumn }) {
-  const [showModal, setShowModal] = useState(false);
-
-  function handleAddTask(taskTitle, taskDescription) {
-    const newTask = {
-      id: Date.now(),
-      title: taskTitle,
-      description: taskDescription,
-      column: 'Todo',
-    };
-    setTasks(prev => [...prev, newTask]);
-  }
-
   return (
     <div className={`column ${className}`}>
       <div className="column-header">
@@ -57,7 +43,6 @@ function Column({ title, className, tasks, setTasks, isDefault, onDeleteColumn }
                       setTasks={setTasks}
                       isDragging={snapshot.isDragging}
                       columnClassName={className}
-                      columns={[title]}
                     />
                   </div>
                 )}
@@ -67,16 +52,6 @@ function Column({ title, className, tasks, setTasks, isDefault, onDeleteColumn }
           </div>
         )}
       </Droppable>
-      <button className="add-task-btn" onClick={() => setShowModal(true)}>
-        +
-      </button>
-      {showModal && (
-        <AddTaskModal
-          columnTitle={title}
-          onAdd={handleAddTask}
-          onClose={() => setShowModal(false)}
-        />
-      )}
     </div>
   );
 }
