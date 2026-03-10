@@ -51,8 +51,9 @@ function App() {
         </div>
         <div className="header-right">
           <button className="header-add-btn" onClick={() => setShowModal(true)}>
-            + New Task
-          </button>
+  <span className="btn-icon">+</span>
+  <span className="btn-text">Add Task</span>
+</button>
           <button className="theme-toggle" onClick={() => setIsDark(prev => !prev)}>
             <span className="toggle-thumb">
               {isDark ? '🌙' : '☀️'}

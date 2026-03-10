@@ -51,6 +51,67 @@
   align-items: center;
   gap: 16px;
 }
+.header-add-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background: #4285F4;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 300;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 40px;
+  transition: max-width 0.4s ease, border-radius 0.4s ease, padding 0.4s ease, background 0.2s ease;
+  padding: 0;
+}
+
+.header-add-btn:hover {
+  max-width: 140px;
+  border-radius: 20px;
+  padding: 0 16px;
+  background: #1a73e8;
+}
+
+.header-add-btn .btn-text {
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0;
+  width: 0;
+  transition: opacity 0.3s ease 0.1s, width 0.3s ease;
+  overflow: hidden;
+}
+
+.header-add-btn:hover .btn-text {
+  opacity: 1;
+  width: auto;
+}
+
+.header-add-btn .btn-icon {
+  font-size: 22px;
+  font-weight: 300;
+  flex-shrink: 0;
+  margin-right: 0;
+  transition: margin 0.3s ease;
+}
+
+.header-add-btn:hover .btn-icon {
+  margin-right: 4px;
+}
+
+.header-add-btn:hover {
+  background: #1a73e8;
+}
+
+.app.dark .header-add-btn {
+  background: #4285F4;
+}
 
 .header-dots {
   display: flex;
@@ -133,7 +194,7 @@
 }
 
 /* DARK MODE */
-/* DARK MODE */
+
 .app.dark {
   background-color: #2596be;
 }
