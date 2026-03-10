@@ -31,6 +31,39 @@
   border-bottom: 1px solid #f1f3f4;
 }
 
+.column-header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.column-delete {
+  background: none;
+  border: none;
+  color: #80868b;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 0;
+  line-height: 1;
+}
+
+.column-delete:hover {
+  color: #EA4335;
+}
+
+.app.dark .column-delete {
+  color: #80868b;
+}
+
+.custom {
+  border-top-color: #9c27b0;
+}
+
+.custom .task-count {
+  background: #f3e5f5;
+  color: #9c27b0;
+}
+
 .column-header h2 {
   font-size: 13px;
   font-weight: 600;

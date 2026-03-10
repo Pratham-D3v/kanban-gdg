@@ -4,7 +4,7 @@ import Card from './Card';
 import AddTaskModal from './AddTaskModal';
 import '../styles/Column.css';
 
-function Column({ title, className, tasks, setTasks }) {
+function Column({ title, className, tasks, setTasks, isDefault, onDeleteColumn }) {
   const [showModal, setShowModal] = useState(false);
 
   function handleAddTask(taskTitle, taskDescription) {
@@ -12,7 +12,7 @@ function Column({ title, className, tasks, setTasks }) {
       id: Date.now(),
       title: taskTitle,
       description: taskDescription,
-      column: title,
+      column: 'Todo',
     };
     setTasks(prev => [...prev, newTask]);
   }
@@ -21,7 +21,17 @@ function Column({ title, className, tasks, setTasks }) {
     <div className={`column ${className}`}>
       <div className="column-header">
         <h2>{title}</h2>
-        <span className="task-count">{tasks.length}</span>
+        <div className="column-header-right">
+          <span className="task-count">{tasks.length}</span>
+          {!isDefault && (
+            <button
+              className="column-delete"
+              onClick={() => onDeleteColumn(title)}
+            >
+              ✕
+            </button>
+          )}
+        </div>
       </div>
       <Droppable droppableId={title}>
         {(provided, snapshot) => (
@@ -47,6 +57,7 @@ function Column({ title, className, tasks, setTasks }) {
                       setTasks={setTasks}
                       isDragging={snapshot.isDragging}
                       columnClassName={className}
+                      columns={[title]}
                     />
                   </div>
                 )}
@@ -57,7 +68,7 @@ function Column({ title, className, tasks, setTasks }) {
         )}
       </Droppable>
       <button className="add-task-btn" onClick={() => setShowModal(true)}>
-        + 
+        +
       </button>
       {showModal && (
         <AddTaskModal

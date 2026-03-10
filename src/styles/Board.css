@@ -13,3 +13,77 @@
 .app.dark .board {
   background: #262628;
 }
+.add-column-area {
+  flex-shrink: 0;
+  width: 300px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.add-column-btn {
+  width: 100%;
+  padding: 12px;
+  border: 2px dashed #e0e0e0;
+  border-radius: 12px;
+  background: transparent;
+  color: #80868b;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+.add-column-btn:hover {
+  border-color: #4285f4;
+  color: #4285f4;
+  background: #e8f0fe;
+}
+
+.add-column-form {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  width: 100%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  border: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-column-input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #4285f4;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+}
+
+.add-column-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.app.dark .add-column-btn {
+  border-color: #3a3a5e;
+  color: #80868b;
+}
+
+.app.dark .add-column-btn:hover {
+  background: #3a3a5e;
+  color: #e0e0e0;
+}
+
+.app.dark .add-column-form {
+  background: #2a2a3e;
+  border-color: #3a3a5e;
+}
+
+.app.dark .add-column-input {
+  background: #32324a;
+  border-color: #4285f4;
+  color: #e0e0e0;
+}

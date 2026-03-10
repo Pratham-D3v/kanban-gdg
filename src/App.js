@@ -52,11 +52,9 @@ function App() {
       </header>
       <Board tasks={tasks} setTasks={setTasks} />
       <footer className="app-footer">
-        <span>Made with</span>
-        <span className="heart">♥</span>
+        <span>Made by</span>
         <span>by <strong>Pratham Dev</strong></span>
         <span className="footer-dot">·</span>
-        <span>GDG on Campus SRM 2026</span>
       </footer>
     </div>
   );
